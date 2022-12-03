@@ -89,3 +89,27 @@
 #17 C:\\Laravel\\lumen\\public\\index.php(5): Laravel\\Lumen\\Application->run()
 #18 {main}
 "} 
+[2022-12-03 23:23:44] local.ERROR: App\Exceptions\Handler::render(): Return value must be of type Illuminate\Http\Response|Illuminate\Http\JsonResponse, string returned {"exception":"[object] (TypeError(code: 0): App\\Exceptions\\Handler::render(): Return value must be of type Illuminate\\Http\\Response|Illuminate\\Http\\JsonResponse, string returned at C:\\Laravel\\lumen\\app\\Exceptions\\Handler.php:32)
+[stacktrace]
+#0 C:\\Laravel\\lumen\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(187): App\\Exceptions\\Handler->render(Object(Laravel\\Lumen\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#1 C:\\Laravel\\lumen\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(179): Laravel\\Lumen\\Application->sendExceptionToHandler(Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#2 C:\\Laravel\\lumen\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#3 C:\\Laravel\\lumen\\public\\index.php(5): Laravel\\Lumen\\Application->run()
+#4 {main}
+"} 
+[2022-12-03 23:23:44] local.ERROR: Uncaught TypeError: App\Exceptions\Handler::render(): Return value must be of type Illuminate\Http\Response|Illuminate\Http\JsonResponse, string returned in C:\Laravel\lumen\app\Exceptions\Handler.php:32
+Stack trace:
+#0 C:\Laravel\lumen\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(205): App\Exceptions\Handler->render(Object(Laravel\Lumen\Http\Request), Object(TypeError))
+#1 C:\Laravel\lumen\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(51): Laravel\Lumen\Application->handleException(Object(TypeError))
+#2 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(TypeError))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught TypeError: App\\Exceptions\\Handler::render(): Return value must be of type Illuminate\\Http\\Response|Illuminate\\Http\\JsonResponse, string returned in C:\\Laravel\\lumen\\app\\Exceptions\\Handler.php:32
+Stack trace:
+#0 C:\\Laravel\\lumen\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(205): App\\Exceptions\\Handler->render(Object(Laravel\\Lumen\\Http\\Request), Object(TypeError))
+#1 C:\\Laravel\\lumen\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(51): Laravel\\Lumen\\Application->handleException(Object(TypeError))
+#2 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(TypeError))
+#3 {main}
+  thrown at C:\\Laravel\\lumen\\app\\Exceptions\\Handler.php:32)
+[stacktrace]
+#0 {main}
+"} 

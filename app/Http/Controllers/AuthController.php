@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Services\AuthService;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -10,8 +11,13 @@ use Illuminate\Http\Response;
 
 class AuthController extends Controller
 {
+    public function __construct(private AuthService $service)
+    {
+    }
+
     public function register(Request $request): JsonResponse
     {
+        $this->service->validateRegister();
         $data = $this->validateRegister($request);
 
         try {
